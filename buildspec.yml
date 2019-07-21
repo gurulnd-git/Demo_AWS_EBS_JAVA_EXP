@@ -8,13 +8,13 @@ phases:
     commands:
   build:
     commands:
-		- echo Building...
-		- mvn clean prepare-package war:explode
-		- echo Finished build.
+        - echo Building...
+        - mvn clean prepare-package war:explode
+        - echo Finished build.
   post_build:
     commands:
-		- echo "Entered the post-build phase"
-		- mv target/deploy ./
+       - echo "Entered the post-build phase"
+       - mv target/deploy ./
   artifacts:
     files:
-		- deploy/**/*
+       - deploy/**/*
