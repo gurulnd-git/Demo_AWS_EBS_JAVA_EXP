@@ -11,7 +11,23 @@ phases:
   build:
     commands:
     - echo "Entered build phase"
-    - mvn assembly:assembly -DdescriptorId=jar-with-dependencies
+    - mvn install
   post_build:
     commands:
     - echo "Entered the post-build phase"
+artifacts:
+  files:
+    - target/aws-demo-deploy-0.0.1-SNAPSHOT.jar
+  discard-paths: yes
+  secondary-artifacts:
+    artifact1:
+      files:
+        - target/aws-demo-deploy-0.0.1-SNAPSHOT.jar
+      discard-paths: yes
+    artifact2:
+      files:
+        - target/aws-demo-deploy-0.0.1-SNAPSHOT.jar
+      discard-paths: yes
+cache:
+  paths:
+    - '/root/.m2/**/*'
