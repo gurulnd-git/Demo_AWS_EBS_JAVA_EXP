@@ -11,7 +11,7 @@
 	<groupId>info.codegap.aws</groupId>
 	<artifactId>aws-demo-deploy</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>aws-ebs-demo-deploy</name>
 	<description>Demo project for Spring Boot</description>
 
