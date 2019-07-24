@@ -11,10 +11,7 @@ phases:
   build:
     commands:
     - echo "Entered build phase"
-    - mvn package
+    - mvn build
   post_build:
     commands:
     - echo "Entered the post-build phase"
-artifacts:
-  files:
-    - target/aws-demo-deploy-0.0.1-SNAPSHOT.jar
